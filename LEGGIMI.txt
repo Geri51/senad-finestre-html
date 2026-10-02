@@ -1,0 +1,68 @@
+﻿SENAD HTML - SITO CON PAGINE SEPARATE
+
+APERTURA
+Estrai tutta la cartella e apri index.html con doppio clic.
+Non serve Node.js o un server. Mantieni insieme tutti i file e la cartella assets.
+
+LE 7 PAGINE PRINCIPALI
+index.html - Home
+leistungen.html - Servizi
+termin.html - Sopralluogo (dimostrativo)
+ueber-uns.html - Uber uns / Chi siamo
+ galerie.html - Galleria (foto illustrative, non lavori verificati di Senad)
+kontakt.html - Contatti, telefono, email e informazioni
+anfahrt.html - Come raggiungerci
+
+LE 4 PAGINE LEGALI
+impressum.html - Dati legali
+ datenschutz.html - Privacy
+agb.html - Condizioni generali
+widerruf.html - Recesso
+
+LINGUE
+DE = tedesco, EN = inglese, EL = greco.
+Tutte le pagine sono disponibili nelle tre lingue tramite il selettore.
+Il menu conserva la lingua mentre si passa da una pagina all'altra.
+
+DATI DA AGGIUNGERE DOPO
+business.js: telefono, email, indirizzo, citta, zona di lavoro, orari.
+I campi sono vuoti come richiesto. Non abbiamo inventato numeri o indirizzi.
+Quando inserisci il telefono e l'email, i collegamenti diventano cliccabili.
+Inserendo via e citta, la pagina Anfahrt mostra il collegamento a Google Maps.
+Nessuna mappa esterna viene caricata automaticamente.
+Ricorda di completare anche i dati legali nelle bozze di content.js.
+
+FILE DA MODIFICARE
+style.css: grafica e adattamento a telefono/tablet.
+content.js: testi originali e bozze legali nelle tre lingue.
+pages.js: testi di Home, Servizi, Chi siamo, Galleria, Contatti e Anfahrt.
+business.js: dati dell'attivita.
+script.js: struttura e funzionamento delle pagine e del modulo.
+assets: foto e icona.
+Con JavaScript attivo, i testi vengono generati da questi file. Le pagine HTML
+contengono anche il contenuto tedesco iniziale; modificare soltanto il testo HTML
+non modifica il contenuto visualizzato dopo l'esecuzione di JavaScript.
+
+STATO
+Questa e la versione HTML separata. La versione React Senad resta intatta.
+Il modulo e una dimostrazione: non invia dati, non salva richieste, non conferma
+appuntamenti e non verifica la disponibilita. Il pagamento resta disabilitato.
+Le quattro pagine legali sono bozze generiche da completare e verificare.
+
+FOTO D'ESEMPIO
+Clay Banks / Unsplash:
+https://unsplash.com/photos/modern-living-room-with-large-windows-overlooking-trees-A9DmoCgM5iw
+Joppe Beurskens / Pexels:
+https://www.pexels.com/photo/doorknob-on-a-window-6689289/
+Justyna Grochowska / Pexels:
+https://www.pexels.com/photo/a-rectangular-sunlight-cast-on-parquet-floor-9819644/
+https://www.pexels.com/license/
+
+Le foto illustrano finestre, porte e materiali. Non documentano lavori di Senad.
+
+FONTI DELLE BOZZE LEGALI
+https://www.gesetze-im-internet.de/ddg/__5.html
+https://www.gesetze-im-internet.de/bgb/__312j.html
+https://www.gesetze-im-internet.de/bgb/__355.html
+https://www.gesetze-im-internet.de/bgb/__356.html
+https://europa.eu/youreurope/business/governance-and-sustainability/digital-and-data-compliance/data-protection-gdpr/index_en.htm

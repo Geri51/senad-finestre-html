@@ -1,0 +1,65 @@
+(function(){
+ 'use strict';
+ const data=globalThis.SENAD_DATA,pages=globalThis.SENAD_PAGES;
+ const routes=['index','leistungen','termin','ueber-uns','galerie','kontakt','anfahrt'];
+ const keys=['service','date','name','email','phone','location','notes'];
+ const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const empty=()=>({service:'0',date:'',name:'',email:'',phone:'',location:'',notes:''});
+ const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;};
+ const icons=['<rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M12 9v12"/>','<path d="M4 21V3h16v18M2 21h20M7 21V6h10v15M14 13h.01"/>','<path d="m12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5"/>','<path d="M3 3h18v16H3zM3 7h18M3 11h18M3 15h18M21 19v3"/>'];
+ const gallery=[{file:'interior.jpg',credit:'Clay Banks / Unsplash',url:'https://unsplash.com/photos/modern-living-room-with-large-windows-overlooking-trees-A9DmoCgM5iw'},{file:'door-detail.jpg',credit:'Joppe Beurskens / Pexels',url:'https://www.pexels.com/photo/doorknob-on-a-window-6689289/'},{file:'floor-detail.jpg',credit:'Justyna Grochowska / Pexels',url:'https://www.pexels.com/photo/a-rectangular-sunlight-cast-on-parquet-floor-9819644/'}];
+ function title(lang,page){return data.legalKeys.includes(page)?data.content[lang].legal[data.legalKeys.indexOf(page)]:pages[lang].names[Math.max(0,routes.indexOf(page||'index'))];}
+ function render(lang='de',page='index',form=empty(),review=false){
+  page=page||'index';
+  const t=data.content[lang],p=pages[lang],b=globalThis.SENAD_BUSINESS||{};
+  const href=route=>`${route}.html?lang=${lang}`;
+  const icon=i=>`<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">${icons[i]}</svg>`;
+  const button=(label,route,secondary=false)=>`<a class="button${secondary?' secondary-button':''}" href="${href(route)}">${escape(label)} <span aria-hidden="true">↗</span></a>`;
+  const brand=`<a class="brand" href="${href('index')}"><span class="brand-mark">S<span>■</span></span><span>SENAD<small>${escape(t.tag)}</small></span></a>`;
+  const phone=String(b.phone||'').trim(),email=String(b.email||'').trim();
+  const safePhone=/^\+?[\d\s()./-]{4,30}$/.test(phone)?phone.replace(/[^+\d]/g,''):'';
+  const safeEmail=/^[^\s@<>"']+@[^\s@<>"']+\.[^\s@<>"']+$/.test(email)?email:'';
+  const address=[b.street,[b.postalCode,b.city].filter(Boolean).join(' ')].filter(Boolean).join(', ');
+  const contactRows=[safePhone?`<a href="tel:${escape(safePhone)}">${escape(phone)}</a>`:escape(phone||p.missing),safeEmail?`<a href="mailto:${escape(safeEmail)}">${escape(email)}</a>`:escape(email||p.missing),escape(address||p.missing),escape(b.serviceArea||p.missing),escape(b.openingHours?.[lang]||p.missing)];
+  const header=`<div class="draft">${escape(t.demo)}</div><header class="multi-header"><div class="header-top">${brand}<div class="header-contact">${safePhone?`<a href="tel:${escape(safePhone)}">${escape(phone)}</a>`:''}</div><div class="languages" aria-label="Language / Sprache / Γλώσσα">${['de','en','el'].map(l=>`<button type="button" data-lang="${l}" lang="${l}" aria-pressed="${lang===l}">${l==='el'?'ΕΛ':l.toUpperCase()}</button>`).join('')}</div></div><nav class="main-nav" aria-label="${escape(p.menu)}">${routes.map((route,i)=>`<a href="${href(route)}" ${route===page?'aria-current="page"':''}>${escape(p.names[i])}</a>`).join('')}</nav></header>`;
+  const footer=`<footer class="multi-footer"><div>${brand}<p>${escape(t.footer)}</p></div><div><p>${escape(p.contactLabels[0])}: ${contactRows[0]}<br>${escape(p.contactLabels[1])}: ${contactRows[1]}</p><div class="legal-links">${data.legalKeys.map((key,i)=>`<a href="${href(key)}">${escape(t.legal[i])}</a>`).join('')}</div></div></footer>`;
+  const heading=(label,head,intro)=>`<section class="page-heading section"><p class="eyebrow">${escape(label)}</p><h1>${escape(head)}</h1><p class="page-lead">${escape(intro)}</p></section>`;
+  const process=`<section class="process section"><div><p class="eyebrow">${escape(t.nav[1])}</p><h2>${escape(t.processTitle)}</h2></div><ol>${t.steps.map((s,i)=>`<li><span>0${i+1}</span><div><h3>${escape(s)}</h3><p>${escape(t.stepText[i])}</p></div></li>`).join('')}</ol></section>`;
+  const banner=`<section class="callout section"><h2>${escape(p.aboutBottom)}</h2><div class="action-row">${button(t.cta,'termin')}${button(p.contactShort,'kontakt',true)}</div></section>`;
+  let main='';
+  if(data.legalKeys.includes(page)){
+   main=`<main class="section legal-page"><a class="back" href="${href('index')}">← ${escape(t.back)}</a><h1>${escape(title(lang,page))}</h1><aside class="legal-warning"><strong>${escape(t.draft)}</strong><p>${escape(t.legalNotice)}</p></aside>${data.legal[lang][page].map(([head,body])=>`<section><h2>${escape(head)}</h2><p>${escape(body)}</p></section>`).join('')}</main>`;
+  } else if(page==='index'){
+   main=`<main><section class="hero"><div class="hero-content"><p class="eyebrow"><span></span>${escape(t.eye)}</p><h1>${escape(t.headline[0])}<br><span>${escape(t.headline[1])}</span></h1><p class="lead">${escape(t.lead)}</p><div class="action-row">${button(t.cta,'termin')}${button(p.explore,'leistungen',true)}</div><div class="hero-bottom"><span>${escape(t.tag)}</span></div></div><div class="hero-image"><img src="assets/interior.jpg" alt="${escape(t.photo)}"><div class="image-caption"><span>${escape(t.caption[0])}</span><span>${escape(t.caption[1])}</span></div></div></section><div class="service-strip">${t.services.map(s=>`<a href="${href('leistungen')}">${escape(s)}</a>`).join('')}</div><section class="section home-intro"><div><p class="eyebrow">SENAD</p><h2>${escape(p.welcome)}</h2><p>${escape(p.welcomeText)}</p></div><div class="home-links">${[['leistungen',p.explore],['ueber-uns',p.aboutLink],['galerie',p.galleryLink]].map(([route,label])=>`<a href="${href(route)}">${escape(label)} <span aria-hidden="true">↗</span></a>`).join('')}</div></section></main>`;
+  } else if(page==='leistungen'){
+   main=`<main>${heading(p.names[1],t.serviceTitle,p.serviceIntro)}<section class="section service-page-grid">${t.services.map((s,i)=>`<article><div class="card-top">${icon(i)}<span>0${i+1}</span></div><h2>${escape(s)}</h2><p>${escape(t.descriptions[i])}</p><ul>${p.serviceDetails[i].map(item=>`<li>${escape(item)}</li>`).join('')}</ul><a class="text-link" href="${href('termin')}&service=${i}">${escape(t.cta)} ↗</a></article>`).join('')}<p class="service-note">${escape(p.serviceNote)}</p></section>${banner}</main>`;
+  } else if(page==='termin'){
+   const field=(key,i)=>`<label>${escape(t.labels[i])}<input name="${key}" type="${key==='date'?'date':key==='email'?'email':key==='phone'?'tel':'text'}" ${key!=='phone'?'required':''} ${key==='date'?`min="${today()}"`:'maxlength="150"'} ${key==='name'?'autocomplete="name"':key==='email'?'autocomplete="email"':key==='phone'?'autocomplete="tel"':key==='location'?'autocomplete="postal-code"':''} value="${escape(form[key])}"></label>`;
+   const formHtml=`<form id="booking-form"><label>${escape(t.labels[0])}<select name="service" required>${t.services.map((s,i)=>`<option value="${i}" ${form.service===String(i)?'selected':''}>${escape(s)}</option>`).join('')}</select></label>${keys.slice(1,6).map((key,i)=>field(key,i+1)).join('')}<label class="full">${escape(t.labels[6])}<textarea name="notes" rows="3" maxlength="2000">${escape(form.notes)}</textarea></label><button class="button full" type="submit">${escape(t.review)} <span aria-hidden="true">↗</span></button></form>`;
+   const summary=`<div id="summary" tabindex="-1"><h3>${escape(t.summary)}</h3><dl>${keys.map((key,i)=>`<div><dt>${escape(t.labels[i])}</dt><dd>${escape(key==='service'?t.services[Number(form.service)]:form[key]||'—')}</dd></div>`).join('')}</dl><button class="edit-button" id="edit-booking" type="button">← ${escape(t.edit)}</button><p class="payment-note">${escape(t.pending)}</p><button class="button payment-disabled" type="button" disabled>${escape(t.pay)}</button></div>`;
+   main=`<main>${heading(p.names[2],p.bookingHeading,p.bookingText)}<section class="section booking"><div><h2>${escape(p.bookingPrepare)}</h2><ul>${p.bookingChecklist.map(s=>`<li>${escape(s)}</li>`).join('')}</ul><p class="privacy-note">${escape(t.noSend)}</p></div><div class="booking-panel">${review?summary:formHtml}</div></section>${process}</main>`;
+  } else if(page==='ueber-uns'){
+   main=`<main>${heading(p.aboutEye,p.aboutTitle,p.aboutIntro)}<section class="section about-body"><div class="about-image"><img src="assets/interior.jpg" alt="${escape(t.photo)}"><p class="image-note">${escape(p.galleryNotice)}</p></div><div><h2>${escape(p.approach)}</h2><p>${escape(p.aboutText)}</p>${p.values.map((v,i)=>`<article class="value"><span>0${i+1}</span><div><h3>${escape(v)}</h3><p>${escape(p.valueText[i])}</p></div></article>`).join('')}</div></section>${banner}</main>`;
+  } else if(page==='galerie'){
+   main=`<main>${heading(p.names[4],p.galleryTitle,p.galleryIntro)}<section class="section gallery-section"><p class="gallery-notice">${escape(p.galleryNotice)}</p><div class="gallery-grid">${gallery.map((g,i)=>`<figure><a href="assets/${g.file}" target="_blank" rel="noopener" aria-label="${escape(p.galleryCaptions[i])}"><img src="assets/${g.file}" alt="${escape(p.galleryCaptions[i])}" loading="lazy"></a><figcaption><h2>${escape(p.galleryCaptions[i])}</h2><a href="${g.url}" target="_blank" rel="noopener noreferrer">${escape(p.photoCredit)}: ${escape(g.credit)}</a></figcaption></figure>`).join('')}</div></section>${banner}</main>`;
+  } else if(page==='kontakt'){
+   main=`<main>${heading(p.names[5],p.contactTitle,p.contactIntro)}<section class="section contact-layout"><dl class="contact-list">${p.contactLabels.map((label,i)=>`<div><dt>${escape(label)}</dt><dd>${contactRows[i]}</dd></div>`).join('')}</dl><aside class="contact-aside"><h2>${escape(p.names[2])}</h2><p>${escape(p.bookingText)}</p>${button(t.cta,'termin')}<p>${escape(p.contactHelp)}</p><a class="text-link" href="${href('anfahrt')}">${escape(p.visitLink)} ↗</a></aside></section></main>`;
+  } else if(page==='anfahrt'){
+   const route=b.street&&b.city?'https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent([address,b.country].filter(Boolean).join(', ')):'';
+   main=`<main>${heading(p.names[6],p.directionsTitle,p.directionsIntro)}<section class="section directions-layout"><div class="address-panel"><p class="eyebrow">SENAD</p><h2>${escape(p.contactLabels[2])}</h2><p>${escape(address||p.missing)}</p>${route?`<a class="button" href="${escape(route)}" target="_blank" rel="noopener noreferrer">${escape(p.route)} ↗</a><p class="small-note">${escape(p.mapNote)}</p>`:`<p>${escape(p.directionsMissing)}</p>`}</div><div><h2>${escape(p.onsiteTitle)}</h2><p>${escape(p.onsiteText)}</p><p><strong>${escape(p.contactLabels[3])}:</strong> ${escape(b.serviceArea||p.missing)}</p><div class="action-row">${button(t.cta,'termin')}${button(p.contactShort,'kontakt',true)}</div></div></section></main>`;
+  }
+  return header+main+footer;
+ }
+ globalThis.SenadHtml={render,empty,routes,title};
+ if(typeof document==='undefined')return;
+ const root=document.getElementById('site'),page=document.body.dataset.page||'index';
+ const query=new URLSearchParams(location.search);let lang=query.get('lang')||'de';
+ if(!['de','en','el'].includes(lang))lang='de';
+ let form=empty(),review=false;if(/^[0-3]$/.test(query.get('service')||''))form.service=query.get('service');
+ const readForm=()=>{const node=document.getElementById('booking-form');if(node){const values=new FormData(node);for(const key of keys)form[key]=String(values.get(key)||'');}};
+ function paint(){root.innerHTML=render(lang,page,form,review);document.documentElement.lang=lang;document.title=`${title(lang,page)} | Senad`;}
+ root.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.lang){readForm();lang=button.dataset.lang;paint();root.querySelector(`[data-lang="${lang}"]`).focus();}else if(button.id==='edit-booking'){review=false;paint();document.querySelector('[name="service"]').focus();}});
+ root.addEventListener('submit',event=>{if(event.target.id!=='booking-form')return;event.preventDefault();readForm();const date=event.target.elements.date;date.setCustomValidity(form.date<today()?data.content[lang].dateError:'');if(!event.target.reportValidity())return;review=true;paint();document.getElementById('summary').focus();});
+ root.addEventListener('input',event=>{if(event.target.name==='date')event.target.setCustomValidity('');});
+ paint();
+})();
