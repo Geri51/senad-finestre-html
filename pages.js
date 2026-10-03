@@ -8,8 +8,12 @@ globalThis.SENAD_PAGES = {
       "Über uns",
       "Galerie",
       "Kontakt",
-      "Anfahrt"
+      "Anfahrt",
+      "Häufige Fragen"
     ],
+    "faqTitle": "Häufige Fragen",
+    "faqIntro": "Antworten auf die wichtigsten Fragen vor einem Auftrag.",
+    "faq": [["Wie läuft eine Anfrage ab?", "Sie schildern Ihr Vorhaben und Ihren Wunschtermin. Anschließend stimmen wir die Einzelheiten ab."], ["Wann erfahre ich Material, Preis und Termin?", "Leistungsumfang, Material, Kosten und Termin werden vor der Beauftragung geklärt."], ["Was sollte ich vorbereiten?", "Hilfreich sind Maße, Fotos der Einbausituation und Ihre Wünsche zu Ausführung und Zeitraum."], ["Was, wenn sich während der Arbeit etwas ändert?", "Dann sprechen wir darüber, bevor es weitergeht."], ["Wie erreiche ich Senad?", "Über die Kontaktseite oder die Terminanfrage. Die Chat-Hilfe unten rechts führt Sie zur passenden Seite."]],
     "menu": "Hauptnavigation",
     "welcome": "Ihr Zuhause. Ihr nächstes Projekt.",
     "welcomeText": "Fenster, Türen, Laminat oder Rollläden: Entdecken Sie unsere Leistungen und planen Sie den nächsten Schritt.",
@@ -103,8 +107,12 @@ globalThis.SENAD_PAGES = {
       "About us",
       "Gallery",
       "Contact",
-      "Directions"
+      "Directions",
+      "FAQ"
     ],
+    "faqTitle": "Frequently asked questions",
+    "faqIntro": "Answers to the main questions before placing an order.",
+    "faq": [["How does an enquiry work?", "You describe your project and preferred date. Then we agree the details."], ["When do I learn about material, price and timing?", "Scope, material, costs and timing are clarified before you place an order."], ["What should I prepare?", "Measurements, photos of the installation situation and your wishes for finish and timing are helpful."], ["What if something changes during the work?", "We talk about it before continuing."], ["How can I reach Senad?", "Via the contact page or the visit request. The chat helper at the bottom right points you to the right page."]],
     "menu": "Main navigation",
     "welcome": "Your home. Your next project.",
     "welcomeText": "Windows, doors, laminate or shutters: explore our services and plan your next step.",
@@ -198,8 +206,12 @@ globalThis.SENAD_PAGES = {
       "Σχετικά με εμάς",
       "Συλλογή φωτογραφιών",
       "Επικοινωνία",
-      "Πρόσβαση"
+      "Πρόσβαση",
+      "Ερωτήσεις"
     ],
+    "faqTitle": "Συχνές ερωτήσεις",
+    "faqIntro": "Απαντήσεις στις βασικές ερωτήσεις πριν από μια ανάθεση.",
+    "faq": [["Πώς λειτουργεί ένα αίτημα;", "Περιγράφετε το έργο και την ημερομηνία που προτιμάτε. Μετά συμφωνούμε τις λεπτομέρειες."], ["Πότε μαθαίνω υλικά, τιμή και χρόνο;", "Το εύρος εργασιών, τα υλικά, το κόστος και ο χρόνος ξεκαθαρίζονται πριν από την ανάθεση."], ["Τι να προετοιμάσω;", "Βοηθούν οι διαστάσεις, φωτογραφίες του χώρου και οι επιθυμίες σας για εκτέλεση και χρόνο."], ["Τι γίνεται αν κάτι αλλάξει στη διάρκεια της εργασίας;", "Το συζητάμε πριν συνεχίσουμε."], ["Πώς επικοινωνώ με τον Senad;", "Μέσω της σελίδας επικοινωνίας ή του αιτήματος επίσκεψης. Ο βοηθός συνομιλίας κάτω δεξιά σας οδηγεί στη σωστή σελίδα."]],
     "menu": "Κύρια πλοήγηση",
     "welcome": "Το σπίτι σας. Το επόμενο έργο σας.",
     "welcomeText": "Παράθυρα, πόρτες, laminate ή ρολά: γνωρίστε τις υπηρεσίες μας και σχεδιάστε το επόμενο βήμα.",
