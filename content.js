@@ -65,9 +65,7 @@
       "noSend": "Nur Vorschau: Ihre Angaben bleiben vorübergehend in dieser Seite und gehen beim Neuladen verloren.",
       "legal": [
         "Impressum",
-        "Datenschutz",
-        "AGB",
-        "Widerruf"
+        "Datenschutz"
       ],
       "back": "Zur Startseite",
       "draft": "ENTWURF – NICHT FÜR DEN LIVE-BETRIEB FREIGEGEBEN",
@@ -140,9 +138,7 @@
       "noSend": "Preview only: your details stay temporarily on this page and disappear when you reload it.",
       "legal": [
         "Legal notice",
-        "Privacy policy",
-        "Terms & conditions",
-        "Right of withdrawal"
+        "Privacy policy"
       ],
       "back": "Back to homepage",
       "draft": "DRAFT – NOT APPROVED FOR LIVE USE",
@@ -215,9 +211,7 @@
       "noSend": "Μόνο προεπισκόπηση: τα στοιχεία παραμένουν προσωρινά στη σελίδα και χάνονται με την ανανέωσή της.",
       "legal": [
         "Νομικά στοιχεία",
-        "Πολιτική απορρήτου",
-        "Γενικοί όροι",
-        "Δικαίωμα υπαναχώρησης"
+        "Πολιτική απορρήτου"
       ],
       "back": "Επιστροφή στην αρχική",
       "draft": "ΠΡΟΣΧΕΔΙΟ – ΔΕΝ ΕΧΕΙ ΕΓΚΡΙΘΕΙ ΓΙΑ ΔΗΜΟΣΙΑ ΧΡΗΣΗ",
@@ -232,15 +226,15 @@
       "impressum": [
         [
           "Anbieter",
-          "Senad – [vollständiger rechtlicher Firmenname und Rechtsform]. Inhaber / Vertretungsberechtigte Person: [Name]. Ladungsfähige Anschrift: [Straße, Hausnummer, Postleitzahl, Ort, Deutschland]."
+          "Senad – Montage von Fenstern, Türen, Laminat und motorisierten Rollläden. Name, Rechtsform, vertretungsberechtigte Person und Anschrift werden hier veröffentlicht, sobald der Geschäftsbetrieb aufgenommen wird."
         ],
         [
           "Kontakt",
-          "E-Mail: [geschäftliche E-Mail]. Telefon: [Telefonnummer]."
+          "Anfragen sind über die Seiten Kontakt und Besichtigung möglich. Telefonnummer und E-Mail-Adresse werden hier ergänzt."
         ],
         [
           "Weitere Angaben",
-          "Umsatzsteuer-Identifikationsnummer, Register und Registernummer, zuständige Kammer / Aufsichtsbehörde und berufsrechtliche Angaben: [ergänzen, soweit anwendbar]. Angaben zur Teilnahme an Verbraucherschlichtung: [Pflicht und Teilnahme prüfen und ergänzen]."
+          "Umsatzsteuer-Identifikationsnummer, Registereintrag, zuständige Kammer und Angaben zur Verbraucherschlichtung werden ergänzt, soweit sie für das Unternehmen gelten."
         ],
         [
           "Bildnachweis",
@@ -276,73 +270,21 @@
           "7. Vor Freischaltung",
           "Tatsächliche Datenflüsse, eingesetzte Dienste, Rechtsgrundlagen, Speicherfristen, Pflichtangaben und gegebenenfalls automatisierte Entscheidungen dokumentieren. Dieser Entwurf beschreibt noch keinen aktiven Buchungs- oder Zahlungsdienst."
         ]
-      ],
-      "agb": [
-        [
-          "1. Anbieter und Geltungsbereich",
-          "Arbeitsentwurf für Besichtigungstermine bei Senad – [rechtlicher Name, Anschrift]. Die endgültigen Bedingungen müssen das tatsächliche Angebot und die Kundengruppe berücksichtigen."
-        ],
-        [
-          "2. Gegenstand",
-          "Die geplante Online-Anfrage betrifft einen Besichtigungstermin für Fenster, Türen, Laminat oder motorisierte Rollläden. Umfang, Dauer, Einsatzgebiet und enthaltene Leistungen: [ergänzen]. Ein Montageauftrag ist nicht automatisch enthalten und bedarf einer gesonderten Vereinbarung."
-        ],
-        [
-          "3. Anfrage und Vertrag",
-          "Diese Vorschau begründet keinen Vertrag und reserviert keinen Termin. Für den Live-Betrieb ist festzulegen, wann eine Anfrage verbindlich wird, wie Senad sie annimmt und wie der Kunde eine Bestätigung auf einem dauerhaften Datenträger erhält. Termine gelten erst nach ausdrücklicher Bestätigung."
-        ],
-        [
-          "4. Preis und Anzahlung",
-          "Besichtigungsgebühr einschließlich gegebenenfalls anfallender Umsatzsteuer, Fahrtkosten, Gesamtbetrag und Höhe / Fälligkeit der Anzahlung: [ergänzen]. Anrechnung auf die Besichtigung oder einen späteren Auftrag: [festlegen]. Restzahlung und Zahlungsarten: [ergänzen]. Diese Vorschau zieht kein Geld ein."
-        ],
-        [
-          "5. Terminänderung und Absage",
-          "Kontakt und Verfahren für Umbuchung oder Absage: [ergänzen]. Etwaige angemessene Stornoregeln müssen ausdrücklich vereinbart und rechtlich geprüft werden. Gesetzliche Widerrufsrechte bleiben unberührt; eine Anzahlung ist nicht allein aufgrund dieser Bezeichnung pauschal nicht erstattbar."
-        ],
-        [
-          "6. Durchführung",
-          "Zugang zum Objekt und notwendige Angaben werden vor dem Termin abgestimmt. Verzögerungen und Änderungen werden miteinander geklärt. Zusätzliche Montagearbeiten bedürfen einer gesonderten Vereinbarung."
-        ],
-        [
-          "7. Gesetzliche Rechte",
-          "Gesetzliche Gewährleistungs-, Haftungs- und Verbraucherrechte bleiben unberührt. Dieser Entwurf enthält keinen pauschalen Haftungsausschluss. Vor Verwendung sind alle offenen Angaben und die Vertragsgestaltung zu prüfen."
-        ]
-      ],
-      "widerruf": [
-        [
-          "Anwendungsbereich",
-          "Entwurf für einen entgeltlichen Besichtigungstermin als Dienstleistung im Fernabsatz mit Verbrauchern. Für Waren, individuell gefertigte Fenster / Türen oder andere Vertragsarten muss eine passende Belehrung verwendet werden."
-        ],
-        [
-          "Widerrufsrecht",
-          "Für den hier zugrunde gelegten Dienstleistungsvertrag können Sie grundsätzlich innerhalb von 14 Tagen ab Vertragsschluss ohne Angabe von Gründen widerrufen, sofern die gesetzlichen Voraussetzungen und die ordnungsgemäße Belehrung vorliegen. Empfänger: Senad – [rechtlicher Name, vollständige Anschrift und E-Mail]. Eine eindeutige Erklärung genügt. Die rechtzeitige Absendung wahrt die Frist."
-        ],
-        [
-          "Folgen des Widerrufs",
-          "Im zugrunde gelegten Fall sind erhaltene Zahlungen grundsätzlich spätestens binnen 14 Tagen nach Eingang des Widerrufs mit demselben Zahlungsmittel zurückzuzahlen, sofern nicht ausdrücklich gebührenfrei etwas anderes vereinbart wurde. Details sind am tatsächlichen Vertrag zu prüfen."
-        ],
-        [
-          "Leistungsbeginn innerhalb der Frist",
-          "Ein früher Beginn erfordert eine gesonderte ausdrückliche Anforderung / Zustimmung und die erforderliche Information. Ein anteiliger Wertersatz kann nur unter den gesetzlichen Voraussetzungen anfallen. Bei vollständiger Erbringung einer entgeltlichen Dienstleistung erlischt das Recht nur bei Vorliegen der gesetzlichen Voraussetzungen, insbesondere vorheriger ausdrücklicher Zustimmung und Kenntnisbestätigung. Diese Vorschau holt eine solche Erklärung nicht ein."
-        ],
-        [
-          "Muster für eine Widerrufserklärung",
-          "An: Senad – [Anschrift / E-Mail]. Hiermit widerrufe ich / widerrufen wir den Vertrag über folgende Dienstleistung: [Leistung]. Bestellt am: [Datum]. Name und Anschrift: [Angaben]. Datum: [Datum]. Unterschrift nur bei Mitteilung auf Papier. Vor dem Live-Betrieb das gesetzliche Muster und die vollständige Belehrung für den konkreten Vertrag ergänzen."
-        ]
       ]
     },
     "en": {
       "impressum": [
         [
           "Provider",
-          "Senad – [full legal business name and legal form]. Owner / authorised representative: [name]. Business address for service: [street, number, postcode, town, Germany]."
+          "Senad – installation of windows, doors, laminate flooring and motorised roller shutters. Name, legal form, authorised representative and address will be published here once business operations begin."
         ],
         [
           "Contact",
-          "Email: [business email]. Telephone: [number]."
+          "Enquiries can be sent through the Contact and Site visit pages. Telephone number and email address will be added here."
         ],
         [
           "Additional information",
-          "VAT identification number, register and registration number, competent chamber / regulator and professional rules: [add where applicable]. Consumer dispute resolution participation: [check the applicable duty and add the statement]."
+          "VAT identification number, register entry, competent chamber and consumer dispute resolution details will be added where they apply to the business."
         ],
         [
           "Image credit",
@@ -378,73 +320,21 @@
           "7. Before activation",
           "Document actual data flows, services, legal bases, retention, required information and any automated decisions. This draft does not describe an active booking or payment service."
         ]
-      ],
-      "agb": [
-        [
-          "1. Provider and scope",
-          "Working draft for site visits offered by Senad – [legal name, address]. Final terms must reflect the actual offer and customer group."
-        ],
-        [
-          "2. Service",
-          "The planned online request concerns a site visit for windows, doors, laminate or motorised shutters. Scope, duration, service area and included work: [complete]. An installation order is not automatically included and requires a separate agreement."
-        ],
-        [
-          "3. Enquiry and contract",
-          "This preview does not create a contract or reserve an appointment. Before activation, define when an enquiry becomes binding, how Senad accepts it and how the customer receives confirmation on a durable medium. Appointments require express confirmation."
-        ],
-        [
-          "4. Price and deposit",
-          "Visit fee including applicable VAT, travel costs, total amount and deposit amount / due date: [complete]. Credit towards the visit or a later installation order: [define]. Remaining payment and methods: [add]. This preview does not collect money."
-        ],
-        [
-          "5. Changes and cancellation",
-          "Contact and procedure for rescheduling or cancellation: [complete]. Any reasonable cancellation terms must be expressly agreed and legally reviewed. Statutory withdrawal rights remain unaffected; a payment is not automatically non-refundable merely because it is called a deposit."
-        ],
-        [
-          "6. Performance",
-          "Access to the property and necessary information are agreed before the visit. Delays and changes are discussed. Additional installation work requires a separate agreement."
-        ],
-        [
-          "7. Statutory rights",
-          "Statutory warranty, liability and consumer rights remain unaffected. This draft contains no blanket exclusion of liability. Complete and review the contractual arrangements before use."
-        ]
-      ],
-      "widerruf": [
-        [
-          "Scope",
-          "Draft for a paid site visit as a distance service contract with consumers. Goods, custom-made windows / doors or other contract types need an appropriate separate notice."
-        ],
-        [
-          "Right of withdrawal",
-          "For the assumed service contract, you generally have 14 days from conclusion to withdraw without giving reasons, subject to the statutory requirements and proper information. Recipient: Senad – [legal name, full address and email]. A clear statement is sufficient; dispatch before the deadline is sufficient."
-        ],
-        [
-          "Effects",
-          "In the assumed case, payments received must generally be refunded within 14 days of receiving withdrawal using the original payment method, unless another free method has been expressly agreed. Check the details against the actual contract."
-        ],
-        [
-          "Starting within the withdrawal period",
-          "An early start requires a separate express request / consent and the required information. Proportionate compensation is payable only where statutory requirements are met. The right expires upon full performance of a paid service only if the statutory conditions are met, including prior express consent and acknowledgement. This preview does not collect such a declaration."
-        ],
-        [
-          "Sample withdrawal statement",
-          "To: Senad – [address / email]. I / we withdraw from the contract for the following service: [service]. Ordered on: [date]. Name and address: [details]. Date: [date]. Signature only for a paper notice. Before activation, provide the statutory model and complete information for the actual contract."
-        ]
       ]
     },
     "el": {
       "impressum": [
         [
           "Πάροχος",
-          "Senad – [πλήρης νομική επωνυμία και νομική μορφή]. Ιδιοκτήτης / νόμιμος εκπρόσωπος: [όνομα]. Πλήρης διεύθυνση: [οδός, αριθμός, Τ.Κ., πόλη, Γερμανία]."
+          "Senad – τοποθέτηση παραθύρων, θυρών, laminate και μηχανοκίνητων ρολών. Η επωνυμία, η νομική μορφή, ο νόμιμος εκπρόσωπος και η διεύθυνση θα δημοσιευθούν εδώ με την έναρξη της δραστηριότητας."
         ],
         [
           "Επικοινωνία",
-          "Email: [επαγγελματικό email]. Τηλέφωνο: [αριθμός]."
+          "Αιτήματα μπορούν να σταλούν μέσω των σελίδων Επικοινωνία και Αυτοψία. Το τηλέφωνο και το email θα προστεθούν εδώ."
         ],
         [
           "Πρόσθετες πληροφορίες",
-          "Αριθμός ΦΠΑ, μητρώο και αριθμός εγγραφής, αρμόδιο επιμελητήριο / εποπτική αρχή και επαγγελματικοί κανόνες: [συμπλήρωση όπου εφαρμόζεται]. Συμμετοχή σε επίλυση καταναλωτικών διαφορών: [έλεγχος υποχρέωσης και συμπλήρωση]."
+          "Ο αριθμός ΦΠΑ, η εγγραφή σε μητρώο, το αρμόδιο επιμελητήριο και τα στοιχεία για την εξωδικαστική επίλυση καταναλωτικών διαφορών θα προστεθούν εφόσον ισχύουν για την επιχείρηση."
         ],
         [
           "Φωτογραφία",
@@ -480,65 +370,11 @@
           "7. Πριν από την ενεργοποίηση",
           "Καταγράψτε τις πραγματικές ροές δεδομένων, υπηρεσίες, νομικές βάσεις, χρόνους διατήρησης, υποχρεωτικές πληροφορίες και τυχόν αυτοματοποιημένες αποφάσεις. Το προσχέδιο δεν περιγράφει ενεργή υπηρεσία κρατήσεων ή πληρωμών."
         ]
-      ],
-      "agb": [
-        [
-          "1. Πάροχος και πεδίο εφαρμογής",
-          "Προσχέδιο για αυτοψίες από τη Senad – [νομική επωνυμία, διεύθυνση]. Οι τελικοί όροι πρέπει να ανταποκρίνονται στην πραγματική προσφορά και στην κατηγορία πελατών."
-        ],
-        [
-          "2. Υπηρεσία",
-          "Το προβλεπόμενο online αίτημα αφορά αυτοψία για παράθυρα, πόρτες, laminate ή ηλεκτροκίνητα ρολά. Αντικείμενο, διάρκεια, περιοχή και περιλαμβανόμενες εργασίες: [συμπλήρωση]. Η ανάθεση τοποθέτησης δεν περιλαμβάνεται αυτόματα και απαιτεί ξεχωριστή συμφωνία."
-        ],
-        [
-          "3. Αίτημα και σύμβαση",
-          "Η προεπισκόπηση δεν δημιουργεί σύμβαση και δεν δεσμεύει ραντεβού. Πριν από την ενεργοποίηση ορίζονται η δεσμευτικότητα του αιτήματος, η αποδοχή από τη Senad και η επιβεβαίωση σε σταθερό μέσο. Τα ραντεβού απαιτούν ρητή επιβεβαίωση."
-        ],
-        [
-          "4. Τιμή και προκαταβολή",
-          "Κόστος αυτοψίας με τυχόν ΦΠΑ, μετακίνηση, συνολικό ποσό, ύψος και προθεσμία προκαταβολής: [συμπλήρωση]. Συμψηφισμός με την αυτοψία ή επόμενη εργασία: [ορισμός]. Υπόλοιπο και τρόποι πληρωμής: [συμπλήρωση]. Η προεπισκόπηση δεν εισπράττει χρήματα."
-        ],
-        [
-          "5. Αλλαγή ή ακύρωση",
-          "Επικοινωνία και διαδικασία αλλαγής ή ακύρωσης: [συμπλήρωση]. Τυχόν εύλογοι όροι ακύρωσης πρέπει να συμφωνούνται ρητά και να ελέγχονται νομικά. Τα νόμιμα δικαιώματα υπαναχώρησης δεν θίγονται. Μια προκαταβολή δεν είναι αυτόματα μη επιστρεπτέα μόνο λόγω της ονομασίας της."
-        ],
-        [
-          "6. Εκτέλεση",
-          "Η πρόσβαση στο ακίνητο και οι απαραίτητες πληροφορίες συμφωνούνται πριν από την επίσκεψη. Καθυστερήσεις και αλλαγές συζητούνται. Πρόσθετες εργασίες τοποθέτησης απαιτούν ξεχωριστή συμφωνία."
-        ],
-        [
-          "7. Νόμιμα δικαιώματα",
-          "Τα νόμιμα δικαιώματα εγγύησης, ευθύνης και προστασίας καταναλωτή δεν θίγονται. Δεν περιλαμβάνεται γενικός αποκλεισμός ευθύνης. Συμπληρώστε και ελέγξτε τους όρους πριν από τη χρήση."
-        ]
-      ],
-      "widerruf": [
-        [
-          "Πεδίο εφαρμογής",
-          "Προσχέδιο για αμειβόμενη αυτοψία ως εξ αποστάσεως σύμβαση υπηρεσιών με καταναλωτές. Αγαθά, ειδικά κατασκευασμένα παράθυρα / πόρτες και άλλες συμβάσεις απαιτούν κατάλληλη ξεχωριστή ενημέρωση."
-        ],
-        [
-          "Δικαίωμα υπαναχώρησης",
-          "Για την υποτιθέμενη σύμβαση υπηρεσιών έχετε γενικά 14 ημέρες από τη σύναψη για υπαναχώρηση χωρίς αιτιολογία, υπό τις νόμιμες προϋποθέσεις και με σωστή ενημέρωση. Παραλήπτης: Senad – [νομική επωνυμία, πλήρης διεύθυνση, email]. Αρκεί σαφής δήλωση και αποστολή πριν από τη λήξη της προθεσμίας."
-        ],
-        [
-          "Συνέπειες",
-          "Στην εξεταζόμενη περίπτωση, τα ποσά επιστρέφονται γενικά εντός 14 ημερών από τη λήψη της υπαναχώρησης με το ίδιο μέσο πληρωμής, εκτός αν έχει συμφωνηθεί ρητά άλλο μέσο χωρίς επιβάρυνση. Οι λεπτομέρειες πρέπει να ελεγχθούν για την πραγματική σύμβαση."
-        ],
-        [
-          "Έναρξη εντός της προθεσμίας",
-          "Η πρόωρη έναρξη απαιτεί ξεχωριστό ρητό αίτημα / συγκατάθεση και την απαιτούμενη ενημέρωση. Αναλογική αποζημίωση οφείλεται μόνο υπό τις νόμιμες προϋποθέσεις. Το δικαίωμα λήγει με την πλήρη παροχή αμειβόμενης υπηρεσίας μόνο όταν πληρούνται οι νόμιμες προϋποθέσεις, περιλαμβανομένης της προηγούμενης ρητής συγκατάθεσης και αναγνώρισης. Η προεπισκόπηση δεν συλλέγει τέτοια δήλωση."
-        ],
-        [
-          "Υπόδειγμα δήλωσης",
-          "Προς: Senad – [διεύθυνση / email]. Δηλώνω / δηλώνουμε υπαναχώρηση από τη σύμβαση για την υπηρεσία: [υπηρεσία]. Παραγγελία στις: [ημερομηνία]. Όνομα και διεύθυνση: [στοιχεία]. Ημερομηνία: [ημερομηνία]. Υπογραφή μόνο σε έντυπη δήλωση. Πριν από την ενεργοποίηση προσθέστε το νόμιμο υπόδειγμα και την πλήρη ενημέρωση για τη συγκεκριμένη σύμβαση."
-        ]
       ]
     }
   },
   "legalKeys": [
     "impressum",
-    "datenschutz",
-    "agb",
-    "widerruf"
+    "datenschutz"
   ]
 };

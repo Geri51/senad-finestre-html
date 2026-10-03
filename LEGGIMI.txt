@@ -16,8 +16,6 @@ anfahrt.html - Come raggiungerci
 LE 4 PAGINE LEGALI
 impressum.html - Dati legali
  datenschutz.html - Privacy
-agb.html - Condizioni generali
-widerruf.html - Recesso
 
 LINGUE
 DE = tedesco, EN = inglese, EL = greco.
