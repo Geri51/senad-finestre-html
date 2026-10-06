@@ -60,7 +60,7 @@
  let form=empty(),review=false;if(/^[0-3]$/.test(query.get('service')||''))form.service=query.get('service');
  const readForm=()=>{const node=document.getElementById('booking-form');if(node){const values=new FormData(node);for(const key of keys)form[key]=String(values.get(key)||'');}};
  function paint(){root.innerHTML=render(lang,page,form,review);document.documentElement.lang=lang;document.title=`${title(lang,page)} | Senad`;}
- root.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.lang){readForm();lang=button.dataset.lang;paint();root.querySelector(`[data-lang="${lang}"]`).focus();}else if(button.id==='edit-booking'){review=false;paint();document.querySelector('[name="service"]').focus();}});
+ root.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.lang){readForm();lang=button.dataset.lang;paint();const url=new URL(location.href);url.searchParams.set('lang',lang);history.replaceState(null,'',url);document.dispatchEvent(new CustomEvent('senad-lang',{detail:lang}));root.querySelector(`[data-lang="${lang}"]`).focus();}else if(button.id==='edit-booking'){review=false;paint();document.querySelector('[name="service"]').focus();}});
  root.addEventListener('submit',event=>{if(event.target.id!=='booking-form')return;event.preventDefault();readForm();const date=event.target.elements.date;date.setCustomValidity(form.date<today()?data.content[lang].dateError:'');if(!event.target.reportValidity())return;review=true;paint();document.getElementById('summary').focus();});
  root.addEventListener('input',event=>{if(event.target.name==='date')event.target.setCustomValidity('');});
  paint();

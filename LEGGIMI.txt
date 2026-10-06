@@ -4,18 +4,19 @@ APERTURA
 Estrai tutta la cartella e apri index.html con doppio clic.
 Non serve Node.js o un server. Mantieni insieme tutti i file e la cartella assets.
 
-LE 7 PAGINE PRINCIPALI
+LE 8 PAGINE PRINCIPALI
 index.html - Home
 leistungen.html - Servizi
 termin.html - Sopralluogo (dimostrativo)
 ueber-uns.html - Uber uns / Chi siamo
- galerie.html - Galleria (foto illustrative, non lavori verificati di Senad)
+galerie.html - Galleria (foto illustrative, non lavori verificati di Senad)
 kontakt.html - Contatti, telefono, email e informazioni
 anfahrt.html - Come raggiungerci
+faq.html - Domande frequenti
 
-LE 4 PAGINE LEGALI
+LE 2 PAGINE LEGALI
 impressum.html - Dati legali
- datenschutz.html - Privacy
+datenschutz.html - Privacy
 
 LINGUE
 DE = tedesco, EN = inglese, EL = greco.
@@ -37,15 +38,20 @@ pages.js: testi di Home, Servizi, Chi siamo, Galleria, Contatti e Anfahrt.
 business.js: dati dell'attivita.
 script.js: struttura e funzionamento delle pagine e del modulo.
 assets: foto e icona.
-Con JavaScript attivo, i testi vengono generati da questi file. Le pagine HTML
-contengono anche il contenuto tedesco iniziale; modificare soltanto il testo HTML
-non modifica il contenuto visualizzato dopo l'esecuzione di JavaScript.
+genera-pagine.js: rigenera i file .html dai testi.
+
+DOPO OGNI MODIFICA AI TESTI
+Le pagine .html contengono una copia del testo tedesco (serve a Google, che legge
+la pagina senza JavaScript). Dopo aver cambiato content.js, pages.js o business.js,
+apri il terminale in questa cartella e scrivi:
+  node genera-pagine.js
+Non modificare a mano il testo dentro i file .html: verrebbe sovrascritto.
 
 STATO
 Questa e la versione HTML separata. La versione React Senad resta intatta.
 Il modulo e una dimostrazione: non invia dati, non salva richieste, non conferma
 appuntamenti e non verifica la disponibilita. Il pagamento resta disabilitato.
-Le quattro pagine legali sono bozze generiche da completare e verificare.
+Le due pagine legali sono bozze generiche da completare e verificare.
 
 FOTO D'ESEMPIO
 Clay Banks / Unsplash:

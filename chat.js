@@ -3,7 +3,7 @@
   if (['de', 'en', 'el'].indexOf(L) < 0) L = 'de';
   var B = globalThis.SENAD_BUSINESS || {};
   function lk(p, t) { return '<a href="' + p + '.html?lang=' + L + '">' + t + '</a>'; }
-  var T = {
+  var TEXTS = {
     de: { title: 'Senad Assistent', ph: 'Nachricht schreiben…', send: 'Senden',
       faq: 'Antworten auf häufige Fragen: ', faqT: 'Häufige Fragen',
       hello: 'Hallo! Wie können wir helfen?',
@@ -40,10 +40,11 @@
       lei: 'Οι υπηρεσίες μας (παράθυρα, πόρτες, laminate, ρολά): ', leiT: 'Υπηρεσίες',
       leg: 'Νομικές πληροφορίες: ', legT: 'Impressum / Απόρρητο',
       fb: 'Θα χαρούμε να σας βοηθήσουμε προσωπικά. Παρακαλούμε χρησιμοποιήστε:', }
-  }[L];
+  };
+  var T = TEXTS[L];
 
   function norm(s) { return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
-  function has(t, list) { return list.some(function (w) { return t.indexOf(w) >= 0; }); }
+  function has(t, list) { return list.some(function (w) { return t.indexOf(norm(w)) >= 0; }); }
 
   function reply(raw) {
     var t = norm(raw);
@@ -79,6 +80,14 @@
       msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
     }
     add('sc-b', 'Willkommen bei Senad! Wie können wir helfen?<br>Welcome to Senad! How can we help?<br>Καλώς ήρθατε στη Senad! Πώς μπορούμε να βοηθήσουμε;', false);
+    document.addEventListener('senad-lang', function (e) {
+      if (!TEXTS[e.detail]) return;
+      L = e.detail; T = TEXTS[L];
+      btn.setAttribute('aria-label', T.title);
+      box.querySelector('#sc-head span').textContent = T.title;
+      box.querySelector('#sc-form button').textContent = T.send;
+      inp.placeholder = T.ph;
+    });
     btn.addEventListener('click', function () { box.classList.toggle('open'); if (box.classList.contains('open')) inp.focus(); });
     box.querySelector('#sc-head button').addEventListener('click', function () { box.classList.remove('open'); });
     box.querySelector('#sc-form').addEventListener('submit', function (e) {
